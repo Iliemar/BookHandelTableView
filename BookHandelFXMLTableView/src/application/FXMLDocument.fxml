@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="412.0" prefWidth="440.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FXMLDocumentController">
+   <children>
+      <TableView fx:id="bookTable" editable="true" layoutY="12.0" prefHeight="381.0" prefWidth="734.0" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="12.0">
+         <columns>
+            <TableColumn fx:id="Name" onEditCommit="#handleEditActionName" prefWidth="138.0" text="Name" />
+            <TableColumn fx:id="ISBN" onEditCommit="#handleEditActionISBN" prefWidth="189.0" text="ISBN" />
+            <TableColumn fx:id="Antal" onEditCommit="#handleEditActionAntal" prefWidth="220.0" text="Antal" />
+            <TableColumn fx:id="Pris" onEditCommit="#handleEditActionPris" prefWidth="180.0" text="Pris" />
+         </columns>
+      </TableView>
+      <HBox layoutY="376.0" prefHeight="39.0" prefWidth="734.0">
+         <children>
+            <TextField fx:id="n" prefHeight="39.0" prefWidth="115.0" />
+            <TextField fx:id="i" layoutX="10.0" layoutY="10.0" prefHeight="39.0" prefWidth="120.0" />
+            <TextField fx:id="a" layoutX="10.0" layoutY="10.0" prefHeight="39.0" prefWidth="116.0" />
+            <TextField fx:id="p" prefHeight="39.0" prefWidth="139.0" />
+            <Button fx:id="add" mnemonicParsing="false" onAction="#ButtonAction" prefHeight="39.0" prefWidth="132.0" text="add" />
+            <Button fx:id="remove" mnemonicParsing="false" onAction="#deleteBook" prefHeight="39.0" prefWidth="107.0" text="remove" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
